@@ -1,11 +1,10 @@
 #include "monty.h"
-int line;
 char *args[1024];
-char file_content[1024];
-FILE *file;
-
 int main(int ac, char **av)
 {
+	char file_content[1024];
+	FILE *file;
+	int line = 0;
 	stack_t *st = NULL;
 
 	st = malloc(sizeof(stack_t));

@@ -7,9 +7,6 @@
 #define EXIT_ERROR 1
 /** global variables */
 extern char *args[1024];
-extern int line;
-extern char file_content[1024];
-extern FILE *file;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
