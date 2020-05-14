@@ -48,7 +48,7 @@ void opt_cmp(stack_t **st, unsigned int line, char *opcode)
 	int opi = 0, i = 0;
 	char *tok = NULL;
 
-	tok = strtok(opcode, " ");
+	tok = strtok(opcode, " \n");
 
 	instruction_t opt[] = {{"push", push}, {"pall", pall}, {"NULL", NULL}};
 
