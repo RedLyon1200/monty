@@ -42,6 +42,7 @@ void opt_cmp(stack_t **st, unsigned int line, char *opcode);
 void *add_node_end(stack_t **head, int num);
 int _strcmp(char *s1, char *s2);
 int _atoi(char *s);
+void free_list(stack_t *head);
 
 /** instructions */
 void push(stack_t **st, unsigned int line_number);

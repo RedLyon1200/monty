@@ -1,5 +1,13 @@
 #include "monty.h"
 char *args[1024];
+
+/**
+ * main - test
+ * @ac: argument count
+ * @av: argument vector
+ *
+ * Return: status
+ */
 int main(int ac, char **av)
 {
 	char file_content[1024];
@@ -32,7 +40,23 @@ int main(int ac, char **av)
 			opt_cmp(&st, line, file_content);
 	}
 	fclose(file);
+	free_list(st);
 	return (0);
+}
+
+/**
+ * free_list - free all space malloc'ed for list_t linked list
+ * @head: pointer to the head of the list
+ */
+void free_list(stack_t *head)
+{
+	stack_t *tmp = head;
+
+	if (tmp != NULL)
+	{
+		free_list(tmp->next);
+		free(tmp);
+	}
 }
 
 /**
