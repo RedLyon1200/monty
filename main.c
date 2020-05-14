@@ -23,13 +23,13 @@ int main(int ac, char **av)
 
 	if (ac != 2)
 	{
-		printf("USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_ERROR);
 	}
 	file = fopen(av[1], "r");
 	if (file == NULL)
 	{
-		printf("ERROR: Can't open file %s\n", av[1]);
+		fprintf(stderr, "ERROR: Can't open file %s\n", av[1]);
 		exit(EXIT_FAILURE);
 	}
 	/* Indicate the end of the file give 0 if didn't find the end of the file */
@@ -93,6 +93,6 @@ void opt_cmp(stack_t **st, unsigned int line, char *opcode)
 		}
 		opi++;
 	}
-	printf("L%u: Unknown instruction %s\n", line, opcode);
+	fprintf(stderr, "L%u: Unknown instruction %s\n", line, opcode);
 	exit(EXIT_FAILURE);
 }

@@ -81,7 +81,7 @@ int _atoi(char *s)
 
 		if (s[i] < 48 || s[i] > 57)
 		{
-			printf("L1: usage: push integer\n");
+			fprintf(stderr, "L1: usage: push integer\n");
 			exit(EXIT_FAILURE);
 		}
 		i++;
